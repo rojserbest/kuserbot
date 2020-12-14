@@ -34,8 +34,15 @@ class UserBot(Client):
         restart_reply_details = super().search_messages('me', query='#دەستپێکردنەوە')
         async for x in restart_reply_details:
             _, chat_id, message_id = x.text.split('، ')
-            await super().edit_message_text(int(chat_id), int(message_id), "سەرکەوتووانە دەستپێکرایەوە!")
-            await super().delete_messages('me', x.message_id)
+            await super().edit_message_text(
+                int(chat_id),
+                int(message_id),
+                "سەرکەوتووانە دەستپێکرایەوە!"
+            )
+            await super().delete_messages(
+                'me',
+                x.message_id
+            )
             break
 
         print("Userbot started. Hi.")
@@ -59,6 +66,9 @@ class UserBot(Client):
             os.system('git pull')
             os.system('pip install -r requirements.txt')
 
-        os.execl(sys.executable, sys.executable, '-m',
-                 self.__class__.__name__.lower())
+        os.execl(
+            sys.executable, sys.executable,
+            '-m',
+            self.__class__.__name__.lower()
+        )
         sys.exit()

@@ -1,5 +1,5 @@
 {
-    "name": "KUserbot - یەکەمین بۆتی بەکارهێنەری تێلێگرام بە کوردی",
+    "name": "KUserbot - Yakam Userboti Kurdy Telegram",
     "description": "بۆتێکی بەکارهێنەری سادەیە کە بە پایسۆن3 و پایرۆگرام نووسراوە.",
     "logo": "https://www.theflagshop.co.uk/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/k/u/kurdistan-flag-std.jpg",
     "keywords": [
@@ -17,19 +17,19 @@
     "stack": "container",
     "env": {
         "ENV": {
-            "description": "واز لەمە بێنە",
-            "value": "Yes"
+            "description": "Wâz lama bena",
+            "value": "."
         },
         "API_ID": {
-            "description": "https://my.telegram.org",
+            "description": "La https://my.telegram.org badasti bena",
             "value": ""
         },
         "API_HASH": {
-            "description": "لە https://my.telegram.org بەدەستی بێنە",
+            "description": "La https://my.telegram.org badasti bena",
             "value": ""
         },
         "USERBOT_SESSION": {
-            "description": "Generate String from Heroku Shell by running 'bash genStr' after you deploy, Set this value later after genrating the string if you dont have. Make sure you choose option 1 since you are here to use it for userbot :)",
+            "description": "String sessionakat lera dâne, datwâni ferkâryaka bbini lasar chonyati dastkawtni string session.",
             "value": ""
         }
     }
