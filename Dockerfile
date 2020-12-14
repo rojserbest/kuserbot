@@ -25,6 +25,13 @@ RUN apt update && apt upgrade -y && \
     linux-headers-amd64 \
     musl-dev \
     musl \
+    neofetch \
+    python3-lxml \
+    python3-psycopg2 \
+    libpq-dev \
+    libcurl4-openssl-dev \
+    libxml2-dev \
+    libxslt1-dev \
     python3-pip \
     python3-requests \
     python3-tz \
@@ -35,7 +42,14 @@ RUN apt update && apt upgrade -y && \
     wget \
     python3 \
     python3-dev \
+    libreadline-dev \
+    libyaml-dev \
     sudo \
+    zlib1g \
+    ffmpeg \
+    libssl-dev \
+    libopus0 \
+    libopus-dev \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
     
 # Pypi package Repo upgrade
