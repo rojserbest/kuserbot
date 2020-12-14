@@ -6,7 +6,7 @@ from userbot.plugins.help import add_command_help
 CHAT_ID = None
 REPLY_TO = None
 
-@Userbot.on_message(filters.user("QuotLyBot") & filters.sticker)
+@UserBot.on_message(filters.user("QuotLyBot") & filters.sticker)
 async def send_result(bot: UserBot, message: Message):
     global CHAT_ID, REPLY_TO
     
