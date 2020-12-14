@@ -1,6 +1,6 @@
 {
-    "name": "Userbot - Telegram Userbot based on pyrogram",
-    "description": "A modular Telegram Userbot based on pyrogram running on Python 3.6+",
+    "name": "KUserbot - یەکەمین بۆتی بەکارهێنەری تێلێگرام بە کوردی",
+    "description": "بۆتێکی بەکارهێنەری سادەیە کە بە پایسۆن3 و پایرۆگرام نووسراوە.",
     "logo": "https://camo.githubusercontent.com/68ce6fb9505cbb4b94483586927d9b0633b7f848/68747470733a2f2f692e696d6775722e636f6d2f575855674448542e706e67",
     "keywords": [
         "telegram",
@@ -11,9 +11,9 @@
         "productivity",
         "testing"
     ],
-    "repository": "https://github.com/athphane/userbot",
-    "website": "athfan.com",
-    "success_url": "https://athfan.com",
+    "repository": "https://github.com/rojserbest/kuserbot",
+    "website": "t.me/su_Theta",
+    "success_url": "https://t.me/su_Theta",
     "stack": "container",
     "env": {
         "ENV": {
@@ -21,11 +21,11 @@
             "value": "Yes"
         },
         "API_ID": {
-            "description": "Get from https://my.telegram.org",
+            "description": "لە https://my.telegram.org بەدەستی بێنە",
             "value": "Yes"
         },
         "API_HASH": {
-            "description": "Get from https://my.telegram.org",
+            "description": "لە https://my.telegram.org بەدەستی بێنە",
             "value": "Yes"
         },
         "USERBOT_SESSION": {
@@ -54,36 +54,6 @@
         },
         "ALLOWED_USERS": {
             "description": "",
-            "value": "",
-            "required": false
-        },
-        "YOURLS_URL": {
-            "description": "(optional) Read more: https://yourls.org/#API",
-            "value": "",
-            "required": false
-        },
-        "YOURLS_KEY": {
-            "description": "(optional) Read more: https://yourls.org/#API",
-            "value": "",
-            "required": false
-        },
-        "YANDEX_API_KEY": {
-            "description": "(optional) get from: https://tech.yandex.com/translate/",
-            "value": "",
-            "required": false
-        },
-        "PM_PERMIT": {
-            "description": "(optional)",
-            "value": "False",
-            "required": false
-        },
-        "PM_LIMIT": {
-            "description": "(optional)",
-            "value": "5",
-            "required": false
-        },
-        "LOG_GROUP": {
-            "description": "(optional)",
             "value": "",
             "required": false
         }
