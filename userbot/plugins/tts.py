@@ -8,7 +8,7 @@ import os
 LANGS = lang.tts_langs()
 
 
-@UserBot.on_message(filters.command('gtts', ['.']) & filters.me)
+@UserBot.on_message(filters.command('tts', ['.']) & filters.me)
 async def send_query(bot: UserBot, message: Message):
     try:
         i = message.text[6:]
