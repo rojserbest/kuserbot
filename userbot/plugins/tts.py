@@ -12,13 +12,8 @@ LANGS = lang.tts_langs()
 async def send_query(bot: UserBot, message: Message):
     global LANGS
     try:
-        i = message.text[6:]
-        l = i.split()[0].lower()
-        t = i[len(l):]
-        if l not in LANGS:
-            l = "en"
-            t = i
-        gTTS(t, lang=l).save("tts.mp3")
+        i = message.text[5:]
+        gTTS(t, lang="en-GB").save("tts.mp3")
         reply = message.reply_to_message.message_id if message.reply_to_message else None
         await message.delete()
         await UserBot.send_voice(message.chat.id, "tts.mp3", reply_to_message_id=reply)
