@@ -17,7 +17,7 @@ async def send_query(bot: UserBot, message: Message):
         gTTS(t, lang=l).save("tts.mp3")
         reply = message.reply_to_message.message_id if message.reply_to_message else None
         await message.delete()
-        await UserBot.send_voice(message.chat, "tts.mp3", reply_to_message_id=reply)
+        await UserBot.send_voice(message.chat.id, "tts.mp3", reply_to_message_id=reply)
     except:
         pass
 
