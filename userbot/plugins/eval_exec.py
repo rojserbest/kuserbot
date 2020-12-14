@@ -8,7 +8,6 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from userbot import UserBot
-from userbot.database import database
 
 
 @UserBot.on_message(filters.command("eval", ".") & filters.me & ~filters.forwarded)
