@@ -15,7 +15,7 @@ async def send_query(bot: UserBot, message: Message):
         l = i.split()[0] if i.split()[0] in LANGS else "en"
         t = i if i.split()[0] not in LANGS else i[len(l) + 1:]
         gTTS(t, lang=l).save("tts.mp3")
-        reply = message.reply_to_message.message_id if message.reply_to_message_id else None
+        reply = message.reply_to_message.message_id if message.reply_to_message else None
         await message.delete()
         await UserBot.send_voice(message.chat, open("tts.mp3", "rb"), reply_to_message_id=reply)
     except:
