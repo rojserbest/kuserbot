@@ -27,7 +27,7 @@ async def evaluation_func(bot: UserBot, message: Message):
 
     try:
         reply = message.reply_to_message or None
-        await aexec(cmd, bot, message, reply, database)
+        await aexec(cmd, bot, message, reply)
     except Exception:
         exc = traceback.format_exc()
 
@@ -65,13 +65,13 @@ async def evaluation_func(bot: UserBot, message: Message):
         await status_message.edit(final_output)
 
 
-async def aexec(code, b, m, r, d):
+async def aexec(code, b, m, r):
     sys.tracebacklimit = 0
     exec(
-        'async def __aexec(b, m, r, d): ' +
+        'async def __aexec(b, m, r): ' +
         ''.join(f'\n {line}' for line in code.split('\n'))
     )
-    return await locals()['__aexec'](b, m, r, d)
+    return await locals()['__aexec'](b, m, r)
 
 
 @UserBot.on_message(filters.command("exec", ".") & filters.me & ~filters.forwarded)
