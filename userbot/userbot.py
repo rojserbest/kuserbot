@@ -30,20 +30,22 @@ class UserBot(Client):
 
     async def start(self):
         await super().start()
-
-        restart_reply_details = super().search_messages('me', query='#دەستپێکردنەوە')
-        async for x in restart_reply_details:
-            _, chat_id, message_id = x.text.split('، ')
-            await super().edit_message_text(
-                int(chat_id),
-                int(message_id),
-                "سەرکەوتووانە دەستپێکرایەوە!"
-            )
-            await super().delete_messages(
-                'me',
-                x.message_id
-            )
-            break
+        try:
+            restart_reply_details = super().search_messages('me', query='#دەستپێکردنەوە')
+            async for x in restart_reply_details:
+                _, chat_id, message_id = x.text.split('، ')
+                await super().edit_message_text(
+                    int(chat_id),
+                    int(message_id),
+                    "سەرکەوتووانە دەستپێکرایەوە!"
+                )
+                await super().delete_messages(
+                    'me',
+                    x.message_id
+                )
+                break
+        except:
+            pass
 
         print("Userbot started. Hi.")
 
