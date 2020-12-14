@@ -10,6 +10,7 @@ LANGS = lang.tts_langs()
 
 @UserBot.on_message(filters.command('tts', ['.']) & filters.me)
 async def send_query(bot: UserBot, message: Message):
+    global LANGS
     try:
         i = message.text[6:]
         l = i.split()[0] if i.split()[0] in LANGS else "en"
