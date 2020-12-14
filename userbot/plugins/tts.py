@@ -13,7 +13,7 @@ async def send_query(bot: UserBot, message: Message):
     global LANGS
     try:
         i = message.text[5:]
-        gTTS(t, lang="en-GB").save("tts.mp3")
+        gTTS(i, lang="en-GB").save("tts.mp3")
         reply = message.reply_to_message.message_id if message.reply_to_message else None
         await message.delete()
         await UserBot.send_voice(message.chat.id, "tts.mp3", reply_to_message_id=reply)
