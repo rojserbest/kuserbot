@@ -51,12 +51,6 @@
             "description": "MongoDB Username",
             "value": "",
             "required": false
-        },
-        "ALLOWED_USERS": {
-            "description": "",
-            "value": "",
-            "required": false
         }
     }
 }
-  

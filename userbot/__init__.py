@@ -38,13 +38,6 @@ if bool(os.environ.get('ENV', False)):
     MONGO_URL = os.environ.get('MONGO_URL', False)
     DB_NAME = os.environ.get('DB_NAME', 'userbot')
 
-    # Other Users
-    try:
-        ALLOWED_USERS = ast.literal_eval(os.environ.get("ALLOWED_USERS", '[]'))
-    except ValueError:
-        ALLOWED_USERS = []
-        raise Exception("Your allowed users list does not contain valid integers.")
-
     # MISC APIs
     YOURLS_URL = os.environ.get('YOURLS_URL', None)
     YOURLS_KEY = os.environ.get('YOURLS_KEY', None)
@@ -62,9 +55,6 @@ else:
     DB_USERNAME = config.get('mongo', 'db_username')
     DB_PASSWORD = config.get('mongo', 'db_password')
     IS_ATLAS = config.getboolean('mongo', 'is_atlas', fallback=False)
-
-    # Other Users
-    ALLOWED_USERS = ast.literal_eval(config.get('users', 'allowed_users', fallback='[]'))
 
     # MISC APIs
     YOURLS_URL = config.get('misc', 'yourls_url', fallback=None)
