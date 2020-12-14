@@ -26,7 +26,7 @@ async def send_query(bot: UserBot, message: Message):
     global CHAT_ID, REPLY_TO
     
     try:
-        CHAT_ID, REPLY_TO = message.chat.id, message.reply_to_message.id if message.reply_to_message else None
+        CHAT_ID, REPLY_TO = message.chat.id, message.reply_to_message.message_id if message.reply_to_message else None
         await UserBot.send_message("QuotLyBot", message.text[8:])
         await message.delete()
     except:
