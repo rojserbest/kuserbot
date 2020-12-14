@@ -1,6 +1,6 @@
 class First:
     ALIVE = "بەکە! ئەنەتە وە وەتەشی گە شینو تا ئاماتتە؟"
-    REPO = "دەستبنێ <a href=\"https://github.com/rojserbest/userbot-1\">بە ئا ئێرە</a> بۆ کردنەوەی ڕیپۆی ئەم بۆتە."
+    REPO = "دەستبنێ <a href=\"https://github.com/rojserbest/kuserbot\">بە ئا ئێرە</a> بۆ کردنەوەی ڕیپۆی ئەم بۆتە."
     CREATOR = "لە ڕۆژێکی باراناویدا لە ژوورێکی زۆر گەرمدا بە دیار چا خواردنەوەوە لەلایەن <a href=\"https://github.com/rojserbest\">rojserbest</a>ـەوە دروستکرام."
 
 

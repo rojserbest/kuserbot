@@ -59,5 +59,6 @@ class UserBot(Client):
             os.system('git pull')
             os.system('pip install -r requirements.txt')
 
-        os.execl(sys.executable, sys.executable, '-m', self.__class__.__name__.lower())
+        os.execl(sys.executable, sys.executable, '-m',
+                 self.__class__.__name__.lower())
         sys.exit()
