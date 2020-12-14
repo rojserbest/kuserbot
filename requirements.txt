@@ -6,17 +6,12 @@ pillow
 pip-chill
 psutil
 ptable
-pymongo
 pyrogram
 python-dotenv
-python-git
 requests-async
 speedtest-cli
 tgcrypto
-yourls
 humanize
-thisapidoesnotexist
 aiofiles
-svglib
 reportlab
 emoji
