@@ -12,7 +12,7 @@ async def send_result(bot: UserBot, message: Message):
     
     if CHAT_ID != None:
         try:
-            await UserBot.send_message(CHAT_ID, message.sticker.file_id, reply_to_message_id=REPLY_TO)
+            await UserBot.send_sticker(CHAT_ID, message.sticker.file_id, reply_to_message_id=REPLY_TO)
             CHAT_ID, REPLY_TO = None, None
         except:
             pass
